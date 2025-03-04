@@ -1,13 +1,15 @@
 package net.javaguides.springboot.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
+@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
+
 @Entity
 @Table(name="employees")
 public class Employee {
@@ -24,21 +26,4 @@ public class Employee {
 
     @Column(name ="email_id")
     private String emailId;
-
-
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
 }
